@@ -432,7 +432,7 @@ a:hover, a:focus {
 .deck-container {
   font-family: Helvetica, Arial, Calibri, sans-serif;
   font-size: 1.75em;
-  background: #3366CC;
+  background-color: #0E295F;
   text-shadow: none;
 }
 .deck-container > .slide {
