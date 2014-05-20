@@ -106,6 +106,7 @@ small {
 
 strong, th {
   font-weight: bold;
+  color: #FF3300;
 }
 
 td {
@@ -280,9 +281,9 @@ li > ol, li > ul {
 }
 
 .deck-container {
-  font-size: 16px;
-  line-height: 1.25;
-  color: #444;
+  font-size: 24px;
+  line-height: 1.55;
+  color: #fff;
 }
 
 .slide {
@@ -304,9 +305,11 @@ h2 {
   border-bottom: 0;
 }
 .cssreflections h2 {
+  /*
   line-height: 1;
   -webkit-box-reflect: below -0.5555em -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.3, transparent), color-stop(0.7, rgba(255, 255, 255, 0.1)), to(transparent));
   -moz-box-reflect: below -0.5555em -moz-linear-gradient(top, transparent 0%, transparent 30%, rgba(255, 255, 255, 0.3) 100%);
+  */
 }
 
 h3 {
