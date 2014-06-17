@@ -35,15 +35,21 @@
     <!-- Begin slides. Just make elements with a class of slide. -->
 
     <section class="slide">
+      <h1>Some very easy questions</h1>
+    </section>
+
+    <section class="slide">
       <h1>How many letters in the alphabet?</h1>
     </section>
 
     <section class="slide">
       <h1>How many days in a year?</h1>
+      <div class="notes">(365). Are you sure? Is that always true? (There are 366 in a leap year. There are 365.25 in a solar year.)</div>
     </section>
 
     <section class="slide">
       <h1>How many hours in a day?</h1>
+      <div class="notes">(24). Is that always true? Let's come back to that.</div>
     </section>
 
 <!--
@@ -55,24 +61,29 @@
 <!-- All of these questions have a lot of different answers. And what I've learned from my time in IT is: expect the unexpected.-->
 
     <section class="slide">
-      <h2>Matthew Gatland</h2>
-      <p>2000 – 2004 – High School<br>
-      2005 – 2008 – University of Auckland (Software Engineering)<br>
-      2009 – 2013 – Orion Health (Software Engineer)<br>
-      2013 – 2014 – Self-employed</p>
+      <h2>Matthew Gatland's Life Story</h2>
+      <ul>
+        <li>High School</li>
+        <li>University of Auckland (Software Engineering)</li>
+        <li>Orion Health (Software Engineer)</li>
+        <li>Self-employed</li>
+      </ul>
+      <div class="notes">Hi. I'm Matthew Gatland... (read the slide) but I'm mainly going to talk about working at a software company, because I think that's what is most relevant to you right now.</div>
     </section>
 
     <section class="slide">
-      <h2>Matthew Gatland</h2>
-      <p>2000 – 2004 – High School<br>
-      2005 – 2008 – University of Auckland (Software Engineering)<br>
-      <strong>2009 – 2013 – Orion Health (Software Engineer)</strong><br>
-      2013 – 2014 – Self-employed</p>
+      <h2>Matthew Gatland's Life Story</h2>
+      <ul>
+        <li>High School</li>
+        <li>University of Auckland (Software Engineering)</li>
+        <li><strong>Orion Health (Software Engineer)</strong></li>
+        <li>Self-employed</li>
+      </ul>
     </section>
 
-  <section class="slide">
+<!--  <section class="slide">
     <img src="pics/1.jpg"> 
-  </section>
+  </section> -->
 
   <section class="slide">
     <img src="pics/2.jpg"> 
@@ -84,6 +95,7 @@
 
   <section class="slide">
     <img src="pics/3.jpg"> 
+    <div class="notes">This is the CDR team. We worked on a product that stores patient data. Data like this:</div>
   </section>
 
     <section class="slide">
@@ -91,37 +103,40 @@
       <p>
         - Name<br>
         - Address<br>
-        - What bed you're in<br>
+        - What hospital bed you're in<br>
         - X-ray photos<br>
         - Allergies<br>
       </p>
+      <div class="notes">All this information comes from messages, that different systems sent to each other. So, when you arrive at hospital, someone signed you in - the sign-in system sends a message, saying 'Matthew Gatland is in Ward 1, Bed 1.' Or after a blood test, the blood lab sends a message saying 'Here are Matthew Gatland's blood test results.'</div>
     </section>
 
     <section class="slide">
       <h2>Where's it used?</h2>
       <p>
         - over 60 hospitals<br>
+        - all around the world<br>
         - Small, like Christchurch - 1000s of records<br>
-        - Large, like Lahey Clinic - millions of records<br>
+        - Large, like Lahey Clinic (USA) - 1,000,000s of records<br>
       </p>
     </section>
 
   <section class="slide">
-    <img src="pics/4-lahey.jpg"> 
+    <img src="pics/4-lahey.jpg">
+    <div class="notes">Lahey Clinic</div>
   </section>
 
     <section class="slide">
-      <h1>A typical morning</h1>
+      <h1>A typical morning on Support</h1>
     </section>
-
-<!-- TODO: Pearlmill -->
 
   <section class="slide">
     <img src="pics/5.jpg"> 
+    <div class="notes">Medha. She was a junior software engineer at the time.</div>
   </section>
 
   <section class="slide">
     <img src="pics/6.jpg"> 
+    <div class="notes">Pearlmill. He's on our support team, so he's really good at making our software work. He's also really good at poker; he can actually go to the casino and just make money. He literally could play poker full time, but he said having a real job is more fun.</div>
   </section>
 
     <section class="slide">
@@ -134,6 +149,9 @@
         5) <strong>2:40 AM - ERROR: OUT OF ORDER</strong><br>
         6) 3:10 AM<br>
       </p>
+      <div class="notes">Anyway, it's a typical morning, and we check our email and find out there's a problem at Lahey Clinic. The messages that are sent between hospital systems seem to be coming in the wrong order.<br>
+
+      Note that something weird is happening around 2 AM.</div>
     </section>
 
     <section class="slide">
@@ -148,6 +166,7 @@
         3 AM<br>
         4 AM…<br>
       </p>
+      <div class="notes">What about when Daylight Saving Time starts? Clocks go back an hour, right? That means the day is actually 25 hours long. And it goes a bit like this (next slide)</div>
     </section>
 
     <section class="slide">
@@ -158,6 +177,7 @@
         <strong>2 AM</strong><br>
         3 AM…<br>
       </p>
+      <div class="notes">So let's look at what happened at Lahey again.</div>
     </section>
 
     <section class="slide">
@@ -170,10 +190,18 @@
         5) <strong>2:40 AM</strong><br>
         6) 3:10 AM<br>
       </p>
+      <div class="notes">The messages are NOT out of order at all. It's just, the system thinks they are because it doesn't understand that 2 AM actually happens twice.
+
+      We've diagnosed the problem.</div>
     </section>
 
     <section class="slide">
       <h1>What now?</h1>
+      <div class="notes">There's a bug in the software. We can fix it in the next version. But hospitals are big organisations, they can be really slow - it might take 6 months before the hospital is ready to install a new version of the software on all their computers.<br>
+      The doctors and nurses need the information in those messages right now, this morning.
+      <br>
+      So fixing the bug isn't enough - we need a quick fix.
+      </div>
     </section>
 
     <section class="slide">
@@ -184,6 +212,9 @@
         4) 2:10 AM &#8594; 2:03 AM<br>
         5) 2:40 AM &#8594; 2:04 AM<br>
       </p>
+      <div class="notes">We decide to hack the messages then send them in again. We'll change the times so they look like they come in the right sequence. I know it'll fix the issue because I know the code really well.<br>
+      But there's one problem.<br>
+      I'm not a doctor. Or a nurse. These messages contain clinical data - it could be life or death stuff. I can't just go changing messages around unless I know it's safe to do so.</div>
     </section>
 
     <section class="slide">
@@ -214,29 +245,34 @@
 
     <section class="slide">
       <h1>---</h1>
+      <div class="notes">And that's what it's like when we support old products that are already out there in use.</div>
     </section>
 
 
     <section class="slide">
       <h1>Making New Stuff</h1>
+      <div class="notes">But it's also fun to make new stuff. I'm going to very quickly talk about some of people who I interact with when we start making a completely new product.</div>
     </section>
 
     <section class="slide">
       <h2>Designers</h2>
       <img src="pics/8-nilu.png"> 
       <p><strong>Nilu</strong>: It takes 4 clicks to get from one patient to the next. Nurses have to do this hundreds of times a day – we should get it down to one click.</p>
+      <div class="notes">You have to click 'Close' on this patient record, then open the patient list (click), then click on the next patient's name, then click 'open'. Nilu says: this action is repeated so many times, we should add one great big "Next Patient" button.</div>
     </section>
 
     <section class="slide">
       <h2>Designers</h2>
       <img src="pics/9-alisha.png"> 
       <p><strong>Alisha</strong>: The patient name needs to be on screen all the time, even if you scrolled down.</p>
+      <div class="notes">Otherwise you might walk over to a new patient, and forget you have a different patient open on your screen. Really dangerous.</div>
     </section> 
 
     <section class="slide">
       <h2>Designers</h2>
       <img src="pics/10-carl.png"> 
       <p><strong>Carl</strong>: That's great, but it's 2 pixels too far to the left.</p>
+      <div class="notes">Carl will walk past my desk and say things like this. He has incredible attention to detail. Some of our designers did software or computer science degrees, but others like Carl did graphic design.</div>
     </section> 
 
     <section class="slide">
@@ -257,12 +293,11 @@
      <section class="slide">
       <h2>The User</h2>
       <img src="pics/11-user.jpg">
+      <div class="notes">Most importantly, the user. For one project, I was flown with my team to Canberra in Australia so we could actually watch a nurse go around taking blood samples out of people.<br>
+        To really see it happen gave us a whole lot of insights we never would have had before.
+        We're used to working with 2 screens, on big desks, all together in our office. But the nurse walks around a building with a trolley - if there's going to be a computer it has to fit on there - and it's already mostly full of blood stuff.
+        Also (insert other details you know)</div>
     </section>
-
-<!--    <section class="slide">
-      <h2>Thanks!</h2>
-      <img src="pics/end.jpg">
-    </section>-->
 
     <section class="slide">
       <h1>---</h1>
