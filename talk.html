@@ -16,6 +16,7 @@
   <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
   <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
   <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+  <link rel="stylesheet" media="screen" href="extensions/peer/deck.peer.css">
 
   <!-- Style theme. More available in /themes/style/ or create your own. -->
   <link rel="stylesheet" media="screen" href="matthew-theme.css">
@@ -330,6 +331,18 @@
       <input type="submit" value="Go">
     </form>
 
+    <!-- deck.connect snippet -->
+    <form action="." method="get" class="connect-form">
+      <span class="connect-controls">
+        <label for="connect-slide">Connect to a remote:</label>
+        <input type="text" name="slidenum" id="connect-slide" list="connect-datalist">
+        <datalist id="connect-datalist"></datalist>
+        <input type="submit" value="Go">
+        <div><a href="#" id="connect-host">Make this a remote</a></div>
+      </span>
+      <span class="connect-message"></span>
+    </form>
+
     <!-- End extension snippets. -->
   </div>
 
@@ -343,6 +356,9 @@
 <script src="extensions/status/deck.status.js"></script>
 <script src="extensions/navigation/deck.navigation.js"></script>
 <script src="extensions/scale/deck.scale.js"></script>
+
+<script src="extensions/peer/peer.min.js"></script>
+<script src="extensions/peer/deck.peer.js"></script>
 
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>

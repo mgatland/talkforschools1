@@ -1,0 +1,37 @@
+.connect-form {
+  position: absolute;
+  z-index: 3;
+  bottom: 10px;
+  left: 50%;
+  height: 3.5em;
+  margin: 0 0 0 -9.125em;
+  line-height: 1.75em;
+  padding: 0.625em;
+  display: none;
+  background: orange;
+  color: black;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.connect-form label {
+  font-weight: bold;
+}
+.connect-form label, .connect-form input {
+  display: inline-block;
+  font-family: inherit;
+}
+.deck-connect .connect-form {
+  display: block;
+}
+
+#connect-slide {
+  width: 8.375em;
+  margin: 0 0.625em;
+  height: 1.4375em;
+}
+
+@media print {
+  .connect-form, #connect-slide {
+    display: none;
+  }
+}
