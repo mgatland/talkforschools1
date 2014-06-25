@@ -111,6 +111,14 @@ Add this HTML to the talk
     });
   };
 
+  var handleConnectToggleButton = function() {
+    var options = $.deck('getOptions');
+    var $button = $(options.selectors.connectToggleButton);
+    $button.on("click", function () {
+      jQuery.deck('toggleConnect');
+    });
+  };
+
   /*
   Extends defaults/options.
   options.keys.connectto
@@ -121,6 +129,7 @@ Add this HTML to the talk
     },
 
     selectors: {
+      connectToggleButton: ".connect-toggle",
       connectControls: ".connect-controls",
       connectMessage: ".connect-message",
       connectForm: '.connect-form',
@@ -173,6 +182,7 @@ Add this HTML to the talk
     bindKeyEvents();
     handleFormSubmit();
     handleHostButton();
+    handleConnectToggleButton();
   });
 })(jQuery);
 

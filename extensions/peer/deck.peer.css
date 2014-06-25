@@ -30,8 +30,12 @@
   height: 1.4375em;
 }
 
+.connect-toggle {
+  cursor: pointer;
+}
+
 @media print {
-  .connect-form, #connect-slide {
+  .connect-form, #connect-slide, .connect-toggle {
     display: none;
   }
 }
