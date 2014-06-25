@@ -99,8 +99,11 @@ Add this HTML to the talk
     var options = $.deck('getOptions');
     var $button = $(options.selectors.connectHost);
     $button.on("click", function () {
+      $(options.selectors.container).addClass('remote-control');
       var net = new NetworkControl();
-      var connectCallback = function () {$.deck('hideConnect');}
+      var connectCallback = function () {
+        $.deck('hideConnect');
+      }
       net.host(connectCallback);
       $(options.selectors.connectMessage).text("Connect client to this id: " + net.getId());
       $(options.selectors.connectControls).hide();
@@ -134,7 +137,7 @@ Add this HTML to the talk
       connectMessage: ".connect-message",
       connectForm: '.connect-form',
       connectInput: '#connect-slide',
-      connectHost: '#connect-host'
+      connectHost: '#connect-host',
     },
 
     keys: {

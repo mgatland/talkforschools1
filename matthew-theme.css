@@ -496,3 +496,8 @@ a:hover, a:focus {
 .notes {
   display: none;
 }
+
+.remote-control .notes {
+  color: yellow;
+  display: block;
+}
