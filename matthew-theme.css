@@ -492,7 +492,6 @@ a:hover, a:focus {
 
 /* Matthew stuff */
 
-
 .notes {
   display: none;
 }
@@ -500,4 +499,15 @@ a:hover, a:focus {
 .remote-control .notes {
   color: yellow;
   display: block;
+}
+
+/* Slide controls normally hide until the mouse is on screen. On a phone this doesn't work.
+You are meant to swipe but that doesn't work... so let's force the controls to be visible.*/
+.remote-control .deck-prev-link, .remote-control .deck-next-link {
+  display: block !important; /*override display: none;*/
+  width: 128px; /*4x larger*/
+  height: 128px;
+  margin-top: -64px;
+  font-size: 80px;
+  line-height: 128px;
 }
